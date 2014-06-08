@@ -1,0 +1,23 @@
+<html ng-app='rwdApp'>
+  <head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel='stylesheet' href='css/desktop.css' type='text/css'/>
+    <link rel='stylesheet' href='css/mobile.css' type='text/css'/>
+  </head>
+  <body>
+    <script src='js/angular.min.js'></script>
+    <script src='js/responsive-directive.js'></script>
+    <div class='description'>description</div>
+    <script>
+      var rwdApp = angular.module('rwdApp', ['angular-responsive']);
+    </script>
+    <div data-ar-desktop>
+      Only shown on desktop devices {{ email }}
+    </div>
+    <div data-ar-responsive="{ 'Mobile': true,
+	                       'Tablet': true,
+			       'Desktop': false }">
+      Only shown on mobile or tablet devices {{ email }}
+    </div>
+  </body>
+</html>
